@@ -1,25 +1,53 @@
 <template>
   <div id="app">
-    <v-header></v-header>
-    <food></food>
-    <cart></cart>
+    <v-header :seller=seller></v-header>
+    <div class="navigator">
+      <div class="nav goods">
+        <router-link to="/goods">商品</router-link>
+      </div>
+      <div class="nav rattings">
+        <router-link to="/rattings">评论</router-link>
+      </div>
+      <div class="nav sellers">
+        <router-link to="/sellers">商家</router-link>
+      </div>
+    </div>
+    <!-- <keep-alive>
+      <router-view></router-view>
+    </keep-alive> -->
+    <router-view></router-view>
   </div>
 </template>
 
 <script>
 import header from './components/Header/Header'
-import food from './components/Food/Food'
-import cart from './components/Cart/Cart'
+import data from '../data.json'
 
 export default {
+  data () {
+    return {
+      seller: data.seller
+    }
+  },
   components: {
-    'v-header': header,
-    food,
-    cart
+    'v-header': header
   }
 }
 </script>
 
-<style>
+<style lang="stylus" rel="stylesheet/stylus">
   @import "./common/stylus/iconfont.css"
+  .navigator
+    display: flex
+    .nav
+      height: 40px
+      line-height: 40px
+      text-align: center
+      flex: 1
+      & > a
+        display: block // 点击文字边缘也可以换页
+        font-size: 14px
+        color:rgb(77,85,93)
+        &.router-link-active
+          color: rgb(240,20,20)
 </style>
