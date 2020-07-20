@@ -201,7 +201,6 @@ export default {
             display: table
             border-1px(rgba(7,17,27,0.1))
             height: 54px
-            width； 56px
             &.current
                 background: #fff
                 font-weight: 700

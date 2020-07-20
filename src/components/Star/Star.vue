@@ -3,6 +3,7 @@
         <span v-for="(itemClass, index) in itemClasses" :class="itemClass" class="star-item" :key="index"></span>
     </div>
 </template>
+
 <script>
 const LENGTH = 5
 const CLS_ON = 'on'
@@ -42,14 +43,17 @@ export default {
   }
 }
 </script>
+
 <style lang="stylus" scoped>
 @import '../../common/stylus/mixin.styl';
 
 .star
-    display: flex
-    align-items: center
-    justify-content: center
+    // display: flex
+    // align-items: center
+    // justify-content: center
+    font-size: 0
     .star-item
+        display: inline-block
         background-repeat: no-repeat
     &.star-48
         .star-item
