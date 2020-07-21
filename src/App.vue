@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <v-header :seller=seller></v-header>
-    <div class="navigator">
+    <div class="navigator border-1px">
       <div class="nav goods">
         <router-link to="/goods">商品</router-link>
       </div>
@@ -15,7 +15,7 @@
     <!-- <keep-alive>
       <router-view></router-view>
     </keep-alive> -->
-    <router-view></router-view>
+    <router-view :seller="seller"></router-view>
   </div>
 </template>
 
@@ -37,10 +37,14 @@ export default {
 
 <style lang="stylus" rel="stylesheet/stylus">
   @import "./common/stylus/iconfont.css"
+    @import "./common/stylus/mixin.styl"
   .navigator
     display: flex
+    border-1px(rgba(7,17,27,0.1))
+    z-index: 20
+    width: 100%
+    height: 40px
     .nav
-      height: 40px
       line-height: 40px
       text-align: center
       flex: 1
