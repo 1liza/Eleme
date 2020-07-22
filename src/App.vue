@@ -12,10 +12,10 @@
         <router-link to="/sellers">商家</router-link>
       </div>
     </div>
-    <!-- <keep-alive>
-      <router-view></router-view>
-    </keep-alive> -->
-    <router-view :seller="seller"></router-view>
+    <keep-alive>
+      <router-view :seller="seller"></router-view>
+    </keep-alive>
+    <!-- <router-view :seller="seller"></router-view> -->
   </div>
 </template>
 

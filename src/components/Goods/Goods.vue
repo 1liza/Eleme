@@ -51,12 +51,12 @@ const ERR_OK = 0
 
 export default {
   props: {
-    goods: {
-      type: Array,
-      default: function () {
-        return []
-      }
-    },
+    // goods: {
+    //   type: Array,
+    //   default: function () {
+    //     return []
+    //   }
+    // },
     seller: {
       type: Object
     }
@@ -70,7 +70,7 @@ export default {
     this.classMap = ['decrease', 'discount', 'special', 'invoice', 'guarantee']
 
     const url = debug ? '/api/goods' : 'http://'
-    // console.log(url)
+    console.log(url)
     // $http.get(this.url)
     this.$http.get(url).then((response) => {
       // console.log('get成功')
@@ -177,7 +177,8 @@ export default {
     return {
       scrollY: 0,
       listHeight: [],
-      selectedFood: {}
+      selectedFood: {},
+      goods: []
     }
   }
 }
