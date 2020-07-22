@@ -1,7 +1,7 @@
-// mock数据使用express
 module.exports = {
   devServer: {
     before (app) {
+      // 这里的app相当于express
       var appData = require('./data.json')
       var seller = appData.seller
       var goods = appData.goods
