@@ -19,7 +19,7 @@
                 </div>
             </div>
             <div class="img-cont" @click="showDetail">
-                <span class="img-num">5个</span>
+                <span class="img-num">{{seller.supports.length}}个</span>
                 <span class="iconfont iconfanhui">&#xe65a;</span>
             </div>
         </div>
@@ -174,14 +174,17 @@ export default {
                 right: 12px
                 bottom: 18px
                 border-radius: 24px
-                padding: 7px 2px 7px 8px
+                padding: 0 8px
                 font-size: 0
+                text-align: center
                 .img-num
                     font-size: 10px
-                    line-height: 12px
-                    font-weight: 200
+                    padding-right: 2px
+                    // vertical-align : middle
                 .iconfanhui
                     font-size: 10px
+                    line-height: 24px
+                    font-weight: 200
         .describe
             position: relative
             height: 28px
@@ -189,7 +192,7 @@ export default {
             white-space: nowrap
             overflow: hidden
             text-overflow: ellipsis
-            padding: 0 12px 0 12px
+            padding: 0 22px 0 12px
             background-color: rgba(7,17,27,0.6)
             .des-img
                 display: inline-block
@@ -202,11 +205,11 @@ export default {
                 font-size: 10px
                 font-weight: 200
                 line-height: 28px
-                margin: 0 4px 0 4px
+                margin: 0 4px
             .iconfanhui
                 font-size: 10px
                 position: absolute
-                top: 4px
+                top: 3px
                 right: 12px
         .detail
             z-index: 100

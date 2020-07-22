@@ -15,15 +15,18 @@
           <div class="title-price">
               <span class="left block">
                 <div class="text">起送价</div>
-                <div class="num">{{seller.minPrice}}元</div>
+                <div class="num">{{seller.minPrice}}</div>
+                <span>元</span>
               </span>
               <span class="middle block">
                 <div class="text">商家配送</div>
-                <div class="num">{{seller.deliveryPrice}}元</div>
+                <div class="num">{{seller.deliveryPrice}}</div>
+                <span class="character">元</span>
               </span>
               <span class="right block">
                 <div class="text">平均配送时间</div>
-                <div class="num">{{seller.deliveryTime}}分钟</div>
+                <div class="num">{{seller.deliveryTime}}</div>
+                <span>分钟</span>
               </span>
           </div>
         </div>
@@ -210,9 +213,12 @@ export default {
             font-size: 10px
             line-height: 10px
           .num
-            font-size: 10px
+            display: inline-block
+            font-size: 24px
             font-weight: 200
             line-height : 24px
+          .character
+            font: 10px
     .seller-activity
       padding: 18px
       .title
