@@ -1,5 +1,5 @@
 {
-  "name": "xiaoguai_shop",
+  "name": "xiaoguai_shop1.0",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -8,18 +8,12 @@
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
-    "better-scroll": "^1.15.2",
     "core-js": "^3.6.5",
-    "register-service-worker": "^1.7.1",
-    "vue": "^2.6.11",
-    "vue-resource": "^1.5.1",
-    "vue-router": "^3.2.0"
+    "vue": "^2.6.11"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "~4.4.0",
     "@vue/cli-plugin-eslint": "~4.4.0",
-    "@vue/cli-plugin-pwa": "~4.4.0",
-    "@vue/cli-plugin-router": "~4.4.0",
     "@vue/cli-service": "~4.4.0",
     "@vue/eslint-config-standard": "^5.1.2",
     "babel-eslint": "^10.1.0",
@@ -32,24 +26,5 @@
     "stylus": "^0.54.7",
     "stylus-loader": "^3.0.2",
     "vue-template-compiler": "^2.6.11"
-  },
-  "eslintConfig": {
-    "root": true,
-    "env": {
-      "node": true
-    },
-    "extends": [
-      "plugin:vue/essential",
-      "@vue/standard"
-    ],
-    "parserOptions": {
-      "parser": "babel-eslint"
-    },
-    "rules": {}
-  },
-  "browserslist": [
-    "> 1%",
-    "last 2 versions",
-    "not dead"
-  ]
+  }
 }
